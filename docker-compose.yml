@@ -7,7 +7,7 @@ services:
     restart: unless-stopped
     working_dir: /var/www
     volumes:
-      - .own_services:/var/www
+      - ./own_services:/var/www
     networks:
       - flip_network
     depends_on:
@@ -21,7 +21,7 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - .:/var/www
+      - ./own_services:/var/www
       - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
     networks:
       - flip_network

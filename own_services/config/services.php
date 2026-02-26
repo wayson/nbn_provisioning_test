@@ -35,4 +35,10 @@ return [
         ],
     ],
 
+    'order_provider' => [
+        'base_url'     => env('ORDER_PROVIDER_BASE_URL', 'http://localhost:8080'),
+        'timeout'      => 10,
+        'max_attempts' => (int) env('ORDER_PROVIDER_MAX_ATTEMPTS', 3),
+    ],
+
 ];
